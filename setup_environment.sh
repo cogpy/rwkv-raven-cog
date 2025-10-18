@@ -24,10 +24,13 @@ echo "Creating output directories..."
 mkdir -p opencog_transformed
 
 # Clone RWKV model (if network access is available)
-if ping -c 1 huggingface.co &> /dev/null; then
+if curl -s --head https://huggingface.co &> /dev/null; then
     echo "Cloning RWKV-4-Raven model..."
-    GIT_LFS_SKIP_SMUDGE=1 git clone https://huggingface.co/BlinkDL/rwkv-4-raven
-    echo "Model cloned successfully (LFS files are pointers only)"
+    if GIT_LFS_SKIP_SMUDGE=1 git clone https://huggingface.co/BlinkDL/rwkv-4-raven; then
+        echo "Model cloned successfully (LFS files are pointers only)"
+    else
+        echo "Failed to clone model repository. Using mock model structure for development."
+    fi
 else
     echo "Network access to huggingface.co not available."
     echo "Using mock model structure for development."

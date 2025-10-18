@@ -10,4 +10,5 @@
 *.ot filter=lfs diff=lfs merge=lfs -text
 *.onnx filter=lfs diff=lfs merge=lfs -text
 *.msgpack filter=lfs diff=lfs merge=lfs -text
-*.json filter=lfs diff=lfs merge=lfs -text
+# Large model metadata files only
+model_config.json filter=lfs diff=lfs merge=lfs -text

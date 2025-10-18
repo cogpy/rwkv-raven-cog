@@ -9,7 +9,7 @@ setup(
     name="rwkv-raven-cog",
     version="0.1.0",
     description="OpenCog transformation for RWKV-4-Raven language models",
-    long_description=open("README.md").read(),
+    long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
     author="OpenCog Community",
     author_email="opencog@example.com",

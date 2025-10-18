@@ -19,6 +19,7 @@ import numpy as np
 from typing import Dict, List, Tuple, Any, Optional
 from dataclasses import dataclass
 from pathlib import Path
+from datetime import datetime
 
 @dataclass
 class OpenCogConfig:
@@ -92,12 +93,13 @@ class OpenCogTransformer:
         
     def load_rwkv_model(self, model_path: str) -> Dict[str, Any]:
         """Load RWKV model from path"""
-        if not os.path.exists(model_path):
+        model_file = Path(model_path)
+        if not model_file.exists():
             # Create mock model structure for demonstration
             return self._create_mock_model_structure()
         
         try:
-            if model_path.endswith('.pth'):
+            if model_file.suffix == '.pth':
                 return torch.load(model_path, map_location='cpu')
             else:
                 raise ValueError(f"Unsupported model format: {model_path}")
@@ -232,7 +234,7 @@ class OpenCogTransformer:
             'transformation_metadata': {
                 'source_model': 'RWKV-4-Raven',
                 'target_framework': 'OpenCog',
-                'transformation_date': str(np.datetime64('now')),
+                'transformation_date': datetime.utcnow().isoformat(),
                 'total_layers': len(layers),
                 'total_attention_nodes': len(attention_map)
             }
@@ -246,7 +248,7 @@ class OpenCogTransformer:
         print(f"Starting OpenCog transformation of RWKV model: {model_path}")
         
         # Create output directory
-        os.makedirs(output_dir, exist_ok=True)
+        Path(output_dir).mkdir(parents=True, exist_ok=True)
         
         # Load model
         model_state_dict = self.load_rwkv_model(model_path)
@@ -265,8 +267,8 @@ class OpenCogTransformer:
         print(f"Created Atomspace with {len(atomspace_nodes)} nodes")
         
         # Save configuration
-        config_path = os.path.join(output_dir, 'opencog_config.json')
-        self.save_transformation_config(config_path, cognitive_layers, attention_map)
+        config_path = Path(output_dir) / 'opencog_config.json'
+        self.save_transformation_config(str(config_path), cognitive_layers, attention_map)
         
         print(f"Transformation completed. Configuration saved to: {config_path}")
         
@@ -304,7 +306,7 @@ def main():
     # Transform each model
     results = {}
     for model_path in model_paths:
-        model_name = os.path.basename(model_path).replace('.pth', '')
+        model_name = Path(model_path).stem
         output_dir = f'opencog_transformed/{model_name}'
         
         try:
