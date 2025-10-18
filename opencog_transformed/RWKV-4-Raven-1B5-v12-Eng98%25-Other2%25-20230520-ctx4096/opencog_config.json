@@ -1,0 +1,477 @@
+{
+  "opencog_config": {
+    "atomspace_size": 15000,
+    "attention_threshold": 0.6,
+    "pattern_match_depth": 4,
+    "cognitive_modules": [
+      "perception",
+      "action",
+      "language",
+      "memory",
+      "attention",
+      "reasoning",
+      "learning"
+    ],
+    "enable_symbolic_integration": true,
+    "memory_optimization": true
+  },
+  "layer_mapping": {
+    "embedding": {
+      "input_size": 50277,
+      "output_size": 2048,
+      "module_type": "perception",
+      "pattern_templates": [
+        "(EvaluationLink (PredicateNode \"word_embedding\") $word)"
+      ],
+      "attention_value": 0.8
+    },
+    "attention_0": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_0": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_1": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_1": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_2": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_2": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_3": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_3": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_4": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_4": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_5": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_5": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_6": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_6": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_7": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_7": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_8": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_8": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_9": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_9": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_10": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_10": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_11": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_11": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_12": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_12": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_13": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_13": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_14": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_14": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_15": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_15": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_16": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_16": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_17": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_17": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_18": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_18": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_19": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_19": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_20": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_20": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_21": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_21": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_22": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_22": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "attention_23": {
+      "input_size": 2048,
+      "output_size": 2048,
+      "module_type": "attention",
+      "pattern_templates": [
+        "(AttentionLink $source $target)"
+      ],
+      "attention_value": 0.9
+    },
+    "feedforward_23": {
+      "input_size": 2048,
+      "output_size": 8192,
+      "module_type": "reasoning",
+      "pattern_templates": [
+        "(InferenceLink (ConceptNode $input) (ConceptNode $output))"
+      ],
+      "attention_value": 0.7
+    },
+    "output": {
+      "input_size": 2048,
+      "output_size": 50277,
+      "module_type": "language",
+      "pattern_templates": [
+        "(EvaluationLink (PredicateNode \"generate_token\") $context)"
+      ],
+      "attention_value": 0.8
+    }
+  },
+  "transformation_metadata": {
+    "source_model": "RWKV-4-Raven",
+    "target_framework": "OpenCog",
+    "transformation_date": "2025-10-18T12:09:37",
+    "total_layers": 50,
+    "total_attention_nodes": 50
+  }
+}
