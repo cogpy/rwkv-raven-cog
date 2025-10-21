@@ -102,6 +102,20 @@ hf download BlinkDL/rwkv-4-raven
 
 ## Architecture
 
+### 📚 Comprehensive Technical Documentation
+
+For detailed technical architecture documentation with extensive Mermaid diagrams, see:
+
+- **[📖 Documentation Hub](docs/README.md)** - Complete documentation navigation
+- **[🏗️ System Overview](docs/architecture/system-overview.md)** - High-level architecture with component diagrams
+- **[🔄 Transformation Pipeline](docs/architecture/transformation-pipeline.md)** - Detailed 7-stage transformation process
+- **[🧠 Cognitive Layers](docs/architecture/cognitive-layers.md)** - Cognitive module architecture and interactions
+- **[⚡ Attention Network](docs/architecture/attention-network.md)** - Dynamic resource allocation system
+- **[⚛️ Atomspace Integration](docs/architecture/atomspace-integration.md)** - Symbolic knowledge representation
+- **[📊 System Flow Diagrams](docs/diagrams/system-flow.md)** - Visual data and control flow
+- **[🔧 Core API Reference](docs/api/core-api.md)** - Complete API documentation
+- **[🚀 Quick Start Guide](docs/guides/quick-start.md)** - Get up and running in minutes
+
 ### OpenCog Integration
 
 The transformation maps RWKV components to OpenCog cognitive modules:
