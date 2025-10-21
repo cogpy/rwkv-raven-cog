@@ -470,7 +470,7 @@
   "transformation_metadata": {
     "source_model": "RWKV-4-Raven",
     "target_framework": "OpenCog",
-    "transformation_date": "2025-10-18T12:11:52",
+    "transformation_date": "2025-10-21T19:45:22.868097",
     "total_layers": 50,
     "total_attention_nodes": 50
   }
